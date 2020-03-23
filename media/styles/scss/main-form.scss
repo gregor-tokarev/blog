@@ -1,0 +1,51 @@
+.form{
+    background-color: #f7f7f7;
+    display: flex;
+    padding: 28px 0px;
+    flex-wrap: wrap;
+    margin: 0 0 100px 0;
+    align-items: center;
+    @media screen and(max-width:480px){
+        display: block;
+    }
+    .sign-up{
+        font-family: zMontserrat;
+        color: #212121;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        flex: 1 1 0px;
+        margin: 0 10px 0 0;
+        @media screen and(max-width:480px) {
+            margin-right: 0;
+        }
+    }
+    &__input{
+        padding: 20px 30px;
+        font-family: zHind;
+        font-size: 15px;
+        margin-right: 20px;
+        border: none;
+        flex: 2 1 0px;
+        @media screen and(max-width: 480px){
+            margin: 0 0 10px 0;
+            width: 100%;
+        }
+    }
+    .submit-button{
+        flex: 1 2 0px;
+        white-space: nowrap;
+        align-self:center;
+        font-family: zHind;
+        background-color: #212121;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 20px 70px;
+        border: 1px solid rgba(221, 221, 221, 0.15);
+        box-shadow: 0 0 0 rgba(232, 232, 232, 0.11);
+        @media screen and(max-width: 480px){
+            width: 100%;
+        }
+    }
+}

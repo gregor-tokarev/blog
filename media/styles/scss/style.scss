@@ -1,0 +1,233 @@
+//=====================================================================================================================
+//-------------------------------------------IMPORTS----STARTS----IMPORTS----------------------------------------------
+//=====================================================================================================================
+@import "../../../node_modules/animate.css/animate.min.css";
+@import "./normalize.css";
+@import "./adaptive_480px.css"; 
+@import "./grid.css";
+//=====================================================================================================================
+//------------------------------------------IMPORTS----FINISHED------IMPORTS-------------------------------------------
+//=====================================================================================================================
+
+
+
+//=====================================================================================================================
+//----------------------------------------------FONTS-----STARTS-----FONTS---------------------------------------------
+//=====================================================================================================================
+@import "./fonts";  
+//=====================================================================================================================
+//----------------------------------------------FONTS-----FINISHID-----FONTS-------------------------------------------
+//=====================================================================================================================
+//=====================================================================================================================
+//----------------------------------------------CODE-----STARTS-----CODE-----------------------------------------------
+//=====================================================================================================================
+$border-color-1:#3c3c3c;
+@mixin black-icon {
+    box-shadow: 1px 1px 3px rgba(213, 213, 213, 0.75);
+    background-color: #212121;
+}
+@mixin white-icon {
+    width: 40px;
+    height: 35px;
+    box-shadow: 1px 1px 3px rgba(213, 213, 213, 0.75);
+    background-color: #ffffff;
+}
+#rotate180deg{
+    transform: rotate(90deg);
+}
+#rotate-90deg{
+    transform: rotate(-90deg);
+}
+@import "./header_footer.scss";
+@import "./main-form.scss";
+.col{
+    .blank{
+        background: #fff;
+        min-height: 500px;
+    }
+    .none-icon{
+        padding: 40px 0;
+        background: url("../../img/post-bg-1.webp");
+    }
+    .video-post{
+        #box{
+            margin-bottom: -20px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .post{
+        background-color: white;
+        display: flex;
+        &:not(:last-child){
+            margin-bottom: 46px;
+        }
+        &:last-child{
+            margin-bottom: 60px;
+        }
+        align-items: center;
+        flex-flow: nowrap column;
+        text-align: center;
+        .box{
+            width: 40px;
+            margin: -17px 0 40px 0;
+            display: flex;
+            @include black-icon();
+            height: 35px;
+            &__icon{
+                margin: auto;
+            }
+        }
+        &__body{
+            padding: 0 30px;
+            text-transform: uppercase;
+            .sup-title, .sub-title{
+                font-size: 14px;
+                font-family:zHind;
+                color: #999999;
+                opacity: 0.9;
+                letter-spacing: 1.4px;
+            }
+            .title{
+                font-family: zMontserrat;
+                font-size: 20px;
+                margin-right: -20px;
+                margin-left: -20px;
+                color: #212121;
+            }
+            .demo-text{
+                margin: 28px 0 0px 0;
+                font-family: zHind;
+                text-align: justify;
+                font-size: 15px;
+                text-transform: none;
+                color: #464646;
+                letter-spacing: 1.5px;
+            }
+        }
+        .read-more{
+            font-family: zHind;
+            cursor: pointer;
+            margin-top: 30px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            line-height: 24px;
+            transition: .4s;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            &:hover{
+                letter-spacing: 2.8px;
+            }
+            &::after, &::before{
+                content: "";
+                display: block;
+                transition: all .4s;
+                height: 2px;
+                background-color: #d7d7d7;
+                width: 0%;
+            }
+            &:hover::after, &:hover::before{
+                width: 100%;
+            }
+        }
+        &__footer{
+            width: 100%;
+            margin: 20px 0 0 0;
+            text-transform: uppercase;
+            height: 60px;
+            border-top: 1px solid #d7d7d7;
+            padding: 24px 30px;
+            display: flex;
+            justify-content: space-between;
+            .comments{
+                color: #999999;
+                font-family: zHind;
+                font-size: 14px;
+                letter-spacing: 1.4px;
+            }
+            .social-list{
+                display: flex;
+                .social__item:not(:last-child){
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .image-post{
+        .some-image{
+            height: 200px;
+            width: 100%;
+            background: whitesmoke;
+        }
+    }
+    .quote-post{
+        font-family: zHind;
+        padding: 0 30px 10px 30px;
+        background-color: #212429;
+        box-shadow: 0 0 0 rgba(232, 232, 232, 0.11);
+        border: 1px solid rgba(221, 221, 221, 0.15);
+        .box{
+            @include white-icon;
+        }
+        .quote{
+            text-align: justify;
+            color: #ffffff;
+            letter-spacing: 1.7px;
+            font-size: 17px;
+            line-height: 28px;
+            font-weight: 300;
+        }
+        .autor{
+            text-transform: uppercase;
+            color: #999999;
+            font-size: 14px;
+            margin-top: 30px;
+            line-height: 24px;
+        }
+    }
+    .video-post{
+        .box{
+            margin-bottom: -20px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .link-post{
+        padding: 0px 30px 60px 30px;
+        background-color: #212429;
+        border: 1px solid rgba(221, 221, 221, 0.15);
+        box-shadow: 0 0 0 rgba(232, 232, 232, 0.11);
+        .box{
+            @include white-icon;
+        }
+        .link{
+            color: #fff;
+            font-family: zHind;
+            font-size: 17px;
+            text-decoration: underline;
+        }
+    }
+    .gallerey{
+        min-height: 310px;
+        box-shadow: 0 0 0 rgba(232, 232, 232, 0.11);
+        border: 1px solid rgba(221, 221, 221, 0.15);
+        background-color: #212429;
+        .box{
+            @include white-icon;
+        }
+    }
+    .sound-post{
+        .sub-title{
+            margin-bottom: 20px;
+        }
+    }
+}
+.hr{
+    margin: 20px 0;
+}
+//=====================================================================================================================
+//=====================================================================================================================
+//----------------------------------------------CODE-----FINISHID-----CODE---------------------------------------------
+//=====================================================================================================================

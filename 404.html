@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Page Not Found</title>
+	<style>
+	@font-face {
+  	font-family: zHind-Regular;
+  	src: url(./media/fonts/Hind/Hind-Regular.ttf);}
+	@font-face {
+  	font-family: "zHind - Semibold";
+  	src: url(./media/fonts/Hind/Hind-SemiBold.ttf); }
+
+	@font-face {
+  	font-family: zHind;
+  		src: url(./media/fonts/Hind/Hind-Light.ttf); }
+
+	@font-face {
+  	font-family: "zOpen Sans";
+  	src: url(./media/fonts/Open_Sans/OpenSans-Light.ttf); }
+
+	@font-face {
+  	font-family: zRoboto;
+  	src: url(./media/fonts/Roboto/Roboto-Bold.ttf); }
+
+	@font-face {
+  	font-family: zMontserrat;
+  	src: url(./media/fonts/Montserrat/Montserrat-Bold.ttf); }
+
+	@font-face {
+  	font-family: zMrsSaintDelafield;
+		src: url(./media/fonts/Mrs_Saint_Delafield/MrsSaintDelafield-Regular.ttf); }
+	.wrapper{
+    display: flex;
+    height: 100vh;
+	}
+	.container{
+    margin: auto;
+  }
+  .error-image{
+    position: relative;
+  }
+  .massage{
+    position: absolute;
+    z-index: 1;
+    user-select: none;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    top: 61%;
+    color: #212121;
+    font-family: zHind;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 14.24px;
+  }
+  .form{
+    display: flex;
+    width: 150%;
+    margin: 50px 0 0 -20%;
+  }
+  @media all and (max-width: 480px){
+    .form{
+      width: 100%;
+      margin: 60px 0 0 0;
+      flex-direction: column;
+    }
+    .form *:last-child{
+      flex: 1 0 50px;
+    }
+  }
+  .form *:first-child{
+    flex-grow: 5;
+    border: 1px solid #cccccc;
+    padding: 15px 25px;
+    color: #363636;
+    font-family: zHind;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.17px;
+  }
+  .form *:last-child{
+    flex-grow: 2;
+    background-color: #363636;
+    font-family: zMontserrat;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  .form *:last-child:focus{
+    outline: none;
+    border: none;
+  }
+  .sorry{
+    font-family: zMontserrat;
+    text-align: center;
+    font-size: 30px;
+    margin: 38px auto 27px auto;
+  }
+  .sorry h2{
+    margin: 0;
+  }
+  .sorry p{
+    color: #999999;
+    font-size: 14px;
+  }
+  .go-home{
+    font-family: zMontserrat;
+    color: #363636;
+    text-align: center;
+    letter-spacing: 0.17px;
+  }
+  .go-home::before{
+    content: url('./media/img/home.webp');
+  }
+	</style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="error-image">
+        <img src="./media/img/404.webp" alt="">
+        <div class="massage">Uh-oh! nothing found</div>
+      </div>
+      <div class="form">
+        <input type="search" placeholder="Type any keyword" name="" id=""><button type="reset">SEARCH</button>
+      </div>
+      <div class="sorry">
+        <h2>Sorry!</h2>
+        <p>The page you are looking for does not exist or another error occurred</p>
+      </div>
+      <div class="go-home">
+        GO BACK HOME
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

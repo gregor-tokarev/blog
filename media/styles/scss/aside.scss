@@ -1,0 +1,169 @@
+@mixin bonus {
+    color: #999999;
+    font-family: zHind;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.84px;
+}
+@import "./fonts";
+@import "./grid.scss";
+@import "./header_footer.scss";
+@import "./normalize.css";
+.aside{
+    margin: 100px 0;
+    background: #fff;
+    border: 1px solid rgba(221, 221, 221, 0.15);
+    padding: 30px 20px;
+    @media screen and(max-width:1024px) {
+        display: none;
+    }
+    #form{
+        margin: 0 0 21px 0;
+        height: 50px;
+        padding: 0;
+        display: flex;
+        .btn{
+            flex: 1 1 50px;
+            background-color: #212121;
+            align-items: stretch;
+            display: flex;
+            img{
+                margin: auto;
+            }
+        }
+        .site-search{
+            flex: 5 10 0px;
+            padding: 0 20px;
+            font-family: zHind;
+            align-items: stretch;
+            color: #212121;
+            text-transform: uppercase;
+            display: block;
+        }
+    }
+    .catalog{
+        margin: 0 0 40px 0;
+        .title{
+            font-family: zMontserrat;
+            color: #212121;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-size: 20px;
+            margin: 0 0 20px 0;
+        }
+        &__item{
+            border-bottom: 1px solid rgba(215, 215, 215, 0.2);
+            color: #212121;
+            font-family: zHind;
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            line-height: 50px;
+            text-transform: uppercase;
+            span{
+                margin: 0 0 0 auto;
+            }
+        }
+        &:nth-child(2){
+            border-top: 1px solid #d7d7d7;
+        }
+    }
+    .posts{
+        text-align: center;
+        margin: 39px 0 0 0;
+        .title{
+            font-family: zMontserrat;
+            color: #212121;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin:  0 0 20px 0;
+        }
+        .post{
+            display: flex;
+            margin-top: 20px;
+            padding: 30px 0 0 0 ;
+            border-top: 1px solid #d7d7d7;
+            .img{
+                background-color: #3a3c49;
+                flex: 1 0 0;
+            }
+            .info{
+                flex: 2 0 0;
+                margin-left: 10px;
+                .sub-title{
+                    font-family: zMontserrat;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-align: left;
+                    line-height: 22px;
+                    color: #212121;
+                    letter-spacing: 1.6px;
+                    text-transform: uppercase;
+                }
+                .bonus{
+                    display: flex;
+                    padding: 0 20px 0   0px;
+                    justify-content: space-between;
+                    .likes, .date{
+                        @include bonus;
+                    }
+                }
+            }
+        }
+    }
+    .social-list{
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0px;
+        &__item{
+            width: 18px;
+            height: 18px;
+        }
+        .item-1{
+            background: url(../../img/twwiter-icon-2.webp) no-repeat center;
+        }
+        .item-2{
+            background: url(../../img/facebook-icon.webp) no-repeat center;
+        }
+        .item-3{
+            background: url(../../img/soc-1.webp) no-repeat center;
+        }
+        .item-4{
+            background: url(../../img/pinterest-icon-2.webp) no-repeat center;
+        }
+        .item-5{
+            background: url(../../img/linkidin-icon.webp) no-repeat center;
+        }
+    }
+    .slider{
+        overflow: hidden;
+        position: relative;
+        &__item{
+            height: 230px;
+            background-color: #3a3c49;
+        }
+        .control{
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            cursor: pointer;
+            top:50%;
+            background: #464646 url(../../img/arrow-1.webp) no-repeat center;
+            &-1{
+                left: 0;
+                transform: rotate(-90deg) translate(50%, 0);
+            }
+            &-2{
+                right: 0;
+                transform: rotate(90deg) translate(-50%,0);
+            }
+        }
+    }
+    #vk_groups{
+        width: 100%;
+    }
+}

@@ -1,0 +1,105 @@
+.section {
+  margin: 100px 0; }
+
+#form {
+  margin: 20px 0 21px 0;
+  height: 50px;
+  width: 100%;
+  display: none;
+  grid-column-end: span 12;
+  padding: 0; }
+  @media screen and (max-width: 1024px) {
+    #form {
+      display: flex; } }
+  #form .btn {
+    flex: 1 0 50px;
+    background-color: #212121;
+    align-items: stretch;
+    display: flex; }
+    #form .btn img {
+      margin: auto; }
+  #form .site-search {
+    flex: 4 10 0px;
+    padding: 0 20px;
+    font-family: zHind;
+    align-items: stretch;
+    color: #212121;
+    text-transform: uppercase;
+    display: block; }
+
+#wrapper .about-me__post {
+  background-color: white; }
+  #wrapper .about-me__post .image {
+    background: gray;
+    position: relative;
+    height: 400px; }
+    #wrapper .about-me__post .image .pinterest {
+      position: absolute;
+      top: 0px;
+      width: 51px;
+      height: 44px;
+      background-color: #cc2127;
+      right: 0px;
+      display: flex; }
+      #wrapper .about-me__post .image .pinterest img {
+        margin: auto; }
+  #wrapper .about-me__post .post-body {
+    display: flex;
+    padding: 0 60px;
+    align-items: center;
+    flex-flow: nowrap column;
+    text-align: center; }
+    #wrapper .about-me__post .post-body .box {
+      width: 40px;
+      margin: -17px 0 40px 0;
+      display: flex;
+      z-index: 2;
+      box-shadow: 1px 1px 3px rgba(213, 213, 213, 0.75);
+      background-color: #212121;
+      height: 35px; }
+      #wrapper .about-me__post .post-body .box__icon {
+        margin: auto; }
+    #wrapper .about-me__post .post-body .sub-title {
+      font-family: zHind;
+      color: #999999;
+      letter-spacing: 1.6px;
+      text-transform: uppercase; }
+    #wrapper .about-me__post .post-body .title {
+      font-family: zMontserrat;
+      text-transform: uppercase;
+      color: #212121;
+      letter-spacing: 1.68px;
+      font-size: 28px;
+      margin: 30px 0; }
+    #wrapper .about-me__post .post-body .bonus-info {
+      display: flex;
+      color: #999999;
+      font-family: zHind;
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase; }
+      #wrapper .about-me__post .post-body .bonus-info * {
+        margin: 0 15px;
+        padding: 0 0 0 24px; }
+      #wrapper .about-me__post .post-body .bonus-info .autor {
+        background: url(../../img/person-icon.webp) no-repeat left bottom; }
+      #wrapper .about-me__post .post-body .bonus-info .date {
+        background: url(../../img/calendar-icon.webp) no-repeat left bottom; }
+    #wrapper .about-me__post .post-body .text {
+      color: #424242;
+      text-align: center;
+      margin: 40px 0 0 0;
+      font-family: zHind;
+      font-size: 16px;
+      font-weight: 300; }
+      #wrapper .about-me__post .post-body .text p {
+        text-align: center;
+        margin: 36px 130px;
+        color: #464646;
+        font-family: "zHind Light";
+        font-weight: 600;
+        letter-spacing: 1.6px;
+        line-height: 20px; }
+        @media screen and (max-width: 560px) {
+          #wrapper .about-me__post .post-body .text p {
+            margin: 0; } }

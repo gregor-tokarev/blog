@@ -1,0 +1,134 @@
+@mixin black-icon {
+    box-shadow: 1px 1px 3px rgba(213, 213, 213, 0.75);
+    background-color: #212121;
+}
+@mixin white-icon {
+    width: 40px;
+    height: 35px;
+    box-shadow: 1px 1px 3px rgba(213, 213, 213, 0.75);
+    background-color: #ffffff;
+}
+.section{
+    margin: 100px 0;
+}
+#form{
+    margin: 20px 0 21px 0;
+    height: 50px;
+    width: 100%;
+    display: none;
+    grid-column-end: span 12;
+    padding: 0;
+    @media screen and(max-width:1024px){
+        display: flex;
+    }
+    .btn{
+        flex: 1 0 50px;
+        background-color: #212121;
+        align-items: stretch;
+        display: flex;
+        img{
+            margin: auto;
+        }
+    }
+    .site-search{
+        flex: 4 10 0px;
+        padding: 0 20px;
+        font-family: zHind;
+        align-items: stretch;
+        color: #212121;
+        text-transform: uppercase;
+        display: block;
+    }
+}
+#wrapper{
+    .about-me__post{
+        background-color: white;
+        .image{
+            background: gray;
+            position: relative;
+            height: 400px;
+            .pinterest{
+                position: absolute;
+                top: 0px;
+                width: 51px;
+                height: 44px;
+                background-color: #cc2127;
+                right: 0px;
+                display: flex;
+                img{
+                    margin: auto;
+                }
+            }
+        }
+        .post-body{
+            display: flex;
+            padding: 0 60px;
+            align-items: center;
+            flex-flow: nowrap column;
+            text-align: center;
+            .box{
+                width: 40px;
+                margin: -17px 0 40px 0;
+                display: flex;
+                z-index: 2;
+                @include black-icon();
+                height: 35px;
+                &__icon{
+                    margin: auto;
+                }
+            }
+            .sub-title{
+                font-family: zHind;
+                color: #999999;
+                letter-spacing: 1.6px;
+                text-transform: uppercase;
+            }
+            .title {
+                font-family: zMontserrat;
+                text-transform: uppercase;
+                color: #212121;
+                letter-spacing: 1.68px;
+                font-size: 28px;
+                margin: 30px 0;
+            }
+            .bonus-info{
+                display: flex;
+                color: #999999;
+                font-family: zHind;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: uppercase;
+                & *{
+                    margin: 0 15px;
+                    padding: 0 0 0 24px;
+                }
+                .autor{
+                    background: url(../../img/person-icon.webp) no-repeat left bottom;
+                }
+                .date{
+                    background: url(../../img/calendar-icon.webp) no-repeat left bottom;
+                }
+            }
+            .text{
+                color: #424242;
+                text-align: center;
+                margin: 40px 0 0 0;
+                font-family: zHind;
+                font-size: 16px;
+                font-weight: 300;
+                p{
+                    text-align: center;
+                    margin: 36px 130px;
+                    color: #464646;
+                    font-family: "zHind Light";
+                    font-weight: 600;
+                    letter-spacing: 1.6px;
+                    line-height: 20px;
+                    @media screen and(max-width: 560px){
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

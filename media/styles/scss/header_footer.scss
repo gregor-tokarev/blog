@@ -1,0 +1,279 @@
+$border-color-1:#3c3c3c;
+#rotate180deg{
+    transform: rotate(90deg);
+}
+#rotate-90deg{
+    transform: rotate(-90deg);
+}
+.header{
+    background-color: #212429;
+    .title{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .page-title{
+            align-self: center;
+            margin: 0 10px 0 10px;
+            .BLOG{
+                text-transform: uppercase;
+                font: 26px "zHind - Semibold";
+                font-size: 1.375rem;
+                color: #fefefe;
+                letter-spacing: 3.6px;
+            }
+        }
+        @media screen and(max-width: 480px){
+            .page-title{
+                align-self: center;
+            }
+        }
+        .menu{
+            padding:20px;
+            display: none;
+            @media screen and(max-width:480px){
+                display: block;
+            }
+        }
+        &__item:not(:nth-child(2)){
+            border-left:1px solid $border-color-1;
+            border-right:1px solid $border-color-1;
+        }
+        .social-list{
+            align-self: stretch;
+            .list{
+                list-style: none;
+                height: 100%;
+                line-height: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                padding-inline-start: 0px;
+                margin-block-start: 0;
+                margin-block-end: 0; 
+                padding: 0;
+                &__item{
+                    padding: 20px;
+                    border-right: 1px solid $border-color-1;
+                }
+            }
+        }
+        @media screen and(max-width: 480px) {
+            .social-list{
+                display: none;
+            }
+        }
+    }
+    .menu-list{
+        display: none;
+        overflow: hidden;
+        max-height: 0px;
+        transition: max-height .4s;
+        .list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__item{
+                padding: 20px;
+            }
+        }
+    }
+    @media screen and(max-width:480px){
+        .menu-list{
+            display: block;
+        }
+    }
+    .slider{
+        width: 100%;
+        height: 580px;
+        overflow: hidden;
+        position: relative;
+        &__item{
+            padding: 230px 0 0 10%;
+            width: 100%;
+            z-index: 1;
+            height: 580px;
+            transition: top .4s;
+            background-size: contain;
+            position: absolute;
+            .sup-title{
+                font-family: "zHind - Semibold";
+                color: #fff;
+            }
+            .slider-title{
+                font-family: zHind;
+                user-select: all;
+                letter-spacing: 5.6px;
+                max-width: 470px;
+                word-wrap: break-word;
+                text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.44);
+                color: #fff;
+                font-size: 40px;
+                text-transform: uppercase;
+            }
+        }
+        &__item-2{
+            background: url("../../img/Slider__item-1.png") no-repeat center top;
+            background-size: cover;
+        }
+        &__item-1{
+            background: green;
+        }
+        &__item-3{
+            background: red;
+        }
+        .top{
+            top:-100%;
+        }
+        .middle{
+            top: 0%;
+        }
+        .bottom{
+            top: 100%;
+        }
+        .navigation{
+            position: absolute;
+            transform: rotate(-90deg);
+            right: -80px;
+            top: 50%;
+            z-index: 4;
+            .tab{
+                margin: 0 0 22px 0;
+                display: flex;
+                justify-content: center;
+                &__item{
+                    height: 8px;
+                    border: 1px solid #ffffff;
+                    width: 8px;
+                    &:not(:last-child){
+                        margin-right: 10px;
+                    }
+                }
+            }
+            &__image{
+                display: inline;
+                cursor: pointer;
+            }
+            .activites{
+                display: flex;
+                align-items: center;
+            }
+            .this-article{
+                user-select: none;
+                display: inline-block;
+                margin: 0 20px;
+                line-height: 0;
+                letter-spacing: 2.8px;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: "zHind - Semibold";
+            }
+        }
+    }
+}
+.footer{
+    background-color: #212429;
+    min-height: 110px;
+    .col{
+        min-height: 100px;
+        padding: 50px 0;
+        color: #f9f9fb;
+        .title{
+            color: #f9f9fb;
+            font-family: zMontserrat;
+            margin: 0 0 39px 0;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 0.96px;
+        }
+        .text{
+            font-family: zHind;
+            color: #f9f9fb;
+            font-size: 15px;
+            line-height: 28px;
+            letter-spacing: 1.5px;
+        }
+        .signature{
+            position: relative;
+            font-family: zMrsSaintDelafield;
+            color: #fff;
+            margin: 11px 0 0 0;
+            font-size: 36px;
+            .rotate{
+               transform: rotate(-5deg);
+               position: absolute;
+               left: 30%;
+               white-space: nowrap;
+               top: 70%
+            }
+            height: 147px;
+            background-color: #3a3c49;
+        }
+        .links{
+            .link{
+                &:first-child{
+                    margin-bottom: 36px;
+                }
+                .twitter-link{
+                    font-family: zHind;
+                    font-size: 14px;
+                    font-weight: 300;
+                    &::before{
+                        content: url("../../img/twitter-icon-list.webp");
+                        display: inline-block;
+                        margin: 0 9px 0 0;
+                    }
+                }
+                .description{
+                    line-height: 20px;
+                    font-family: zHind;
+                    font-size: 15px;
+                    color: #fff;
+                    letter-spacing: 1.5px;
+                    margin:19px 0 0 23px;
+                }
+            }
+        }
+        .image{
+            background: white;
+            .slicer{
+                overflow: hidden;
+                display: flex;
+                height: 100%;
+                width: 100%;
+                .zoom-image{
+                    display: block;
+                    margin: auto;
+                    transition: .4s ease;
+                    &:hover{
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        }
+        .comment{
+            font-family: "zOpen Sans";
+            .autor{
+                font-size: 14px;
+                line-height: 24px;
+                margin: 0 0 10px 0;
+                letter-spacing: 1.4px;
+            }
+            .text{
+                font-size: 14px;
+                letter-spacing: 1.4px;
+                font-size: 14px;
+                line-height: 24px;
+                text-align: left;
+            }
+        }
+    }
+    .foot{
+        background-color: #17191c;
+        padding: 15px 0;
+        font-family: zHind;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        opacity: 0.4;
+    }
+}
